@@ -83,12 +83,14 @@
       head.appendChild(span("svc__name", s.name));
       head.insertAdjacentHTML("beforeend", CHEV); // CHEV is a constant literal, no data
 
-      // detail: description | price
+      // detail: description | price (price shown only when set)
       var body = document.createElement("div");
       body.className = "svc__body";
       body.appendChild(span("svc__desc", s.desc));
-      body.appendChild(span("svc__bar", "|"));
-      body.appendChild(span("svc__price", s.price));
+      if (s.price) {
+        body.appendChild(span("svc__bar", "|"));
+        body.appendChild(span("svc__price", s.price));
+      }
 
       var inner = document.createElement("div");
       inner.className = "svc__detailInner";
