@@ -435,3 +435,9 @@ body.lang-elv .email { cursor: crosshair; }
   .khs, .khs__grid, .khs__scan, .khs__dot { animation: none !important; }
   .khs__title::before, .khs__title::after { display: none; }
 }
+.khs-contact {
+  margin: -10px 0 clamp(22px, 4.5vh, 42px); text-align: center;
+  font-size: 13px; font-weight: 600; letter-spacing: .01em; color: #cfd8d3;
+}
+.khs-contact a { color: var(--lime); font-weight: 700; }
+.khs-contact a:hover { text-decoration: underline; }
